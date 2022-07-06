@@ -14,11 +14,11 @@ export default function Banner() {
             Fast Easy Private Investigation Services
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Checkout the services section to find what you need. If you want a
-            personal consultation to discuss your needs feel free to email for
+            Checkout the services section to find what you need. For personal
+            consultation to discuss your needs feel free to email for
             scheduling.
           </Text>
-          <Button variant="primary">Services</Button>
+          <Button variant="primary">Contact</Button>
         </Box>
         <Box sx={styles.banner.imageBox}>
           <Image src={BannerImg} alt="banner" />

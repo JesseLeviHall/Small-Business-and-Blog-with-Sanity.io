@@ -70,6 +70,7 @@ export default function KeyFeature() {
 const styles = {
   grid: {
     width: ["100%", "80%", "100%"],
+    mb: 10,
     mx: "auto",
     gridGap: [
       "35px 0",
