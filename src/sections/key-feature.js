@@ -48,8 +48,8 @@ export default function KeyFeature() {
     <section sx={{ variant: "section.KeyFeature" }} id="feature">
       <Container>
         <SectionHeader
-          slogan="What distiguishes Caryolyn"
-          title="Why Caroylyn Carlson is unique"
+          slogan="What distiguishes Carolyn"
+          title="Why Carolyn Carlson is unique"
         />
         <Grid sx={styles.grid}>
           {data.map((item) => (
