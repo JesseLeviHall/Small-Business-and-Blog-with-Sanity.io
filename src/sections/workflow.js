@@ -22,7 +22,7 @@ const data = [
   },
   {
     id: 3,
-    title: "Await the investigation to be caried out",
+    title: "The investigation is caried out",
     text:
       "Carolyn will conduct the job and keep in touch with you on the progress.",
   },
@@ -36,7 +36,7 @@ const data = [
 
 export default function WorkFlow() {
   return (
-    <section sx={styles.workflow}>
+    <section id="workflow" sx={styles.workflow}>
       <Container>
         <SectionHeader
           slogan="How Hiring Works"

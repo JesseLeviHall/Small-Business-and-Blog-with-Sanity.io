@@ -12,9 +12,9 @@ const data = {
   subTitle: "Private Investigation Services",
   title: "What to look for when hiring a PI",
   description:
-    "Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.",
-  btnName: "Contact",
-  btnURL: "#",
+    "When hiring a private investigator, remember, in this field, experience, trust, and professionalism are extremely import.",
+  btnName: "Get Started",
+  btnURL: "workflow",
 };
 
 export default function CoreFeature() {

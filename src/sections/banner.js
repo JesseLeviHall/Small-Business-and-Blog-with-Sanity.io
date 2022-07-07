@@ -4,6 +4,7 @@ import { Container, Box, Heading, Text, Image, Button } from "theme-ui";
 import BannerImg from "assets/banner-thumb.png";
 import ShapeLeft from "assets/shape-left.png";
 import ShapeRight from "assets/shape-right.png";
+import { Link } from "react-scroll";
 
 export default function Banner() {
   return (
@@ -18,7 +19,14 @@ export default function Banner() {
             consultation to discuss your needs feel free to email for
             scheduling.
           </Text>
-          <Button variant="primary">Contact</Button>
+          <Link
+            to="workflow"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            <Button variant="primary">Get Started</Button>
+          </Link>
         </Box>
         <Box sx={styles.banner.imageBox}>
           <Image src={BannerImg} alt="banner" />

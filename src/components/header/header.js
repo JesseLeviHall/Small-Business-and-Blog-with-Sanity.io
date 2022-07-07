@@ -31,7 +31,7 @@ export default function Header({ className }) {
           className="donate__btn"
           variant="secondary"
           aria-label="Get Started">
-          What's Next?
+          Contact
         </Button>
         <MobileDrawer />
       </Container>
