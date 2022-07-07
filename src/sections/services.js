@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container, Heading, Text, Box, Image } from "theme-ui";
 import SectionHeader from "components/section-header";
-import Rating from "components/rating";
 import ButtonGroup from "components/button-group";
 import Carousel from "react-multi-carousel";
 
@@ -13,9 +12,9 @@ import Avatar4 from "assets/testimonial/avatar4.png";
 const data = [
   {
     id: 1,
-    title: "Modern look & trending design",
+    title: "Background Investigations",
     description:
-      "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      "The most common types of background checks search for criminal activity, verify employment and education, including identity verification, and request driving records.",
     avatar: Avatar1,
     name: "Denny Hilguston",
     designation: "@denny.hil",
@@ -23,9 +22,9 @@ const data = [
   },
   {
     id: 2,
-    title: "Design Quality & performance",
+    title: "Gather evidence for cases or private matters",
     description:
-      "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      "Interview witnesses, verify information, conduct surveillance, find missing persons, and gather vital facts for cases. ",
     avatar: Avatar2,
     name: "Denny Hilguston",
     designation: "@denny.hil",
@@ -33,9 +32,9 @@ const data = [
   },
   {
     id: 3,
-    title: "Layout and organized layers",
+    title: "Investigative Journalism",
     description:
-      "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      "Watchdog journalism that makes an impact. With decades of experience Carolyn specializes in investigative reporting and is available for hire.",
     avatar: Avatar3,
     name: "Denny Hilguston",
     designation: "@denny.hil",
@@ -43,9 +42,9 @@ const data = [
   },
   {
     id: 4,
-    title: "Modern look & trending design",
+    title: "Covert Observations",
     description:
-      "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      "Help learn more about a subject by discreetly gathering information undercover, without arousing suspicions. Includes taking photos or recording audio or video. ",
     avatar: Avatar4,
     name: "Denny Hilguston",
     designation: "@denny.hil",
@@ -112,7 +111,6 @@ export default function ServicesCard() {
         <Carousel {...carouselParams}>
           {data.map((item) => (
             <Box sx={styles.reviewCard} key={item.sliderClass}>
-              <Rating rating={item.review} />
               <Heading as="h3" sx={styles.title}>
                 {item.title}
               </Heading>
