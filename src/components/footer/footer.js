@@ -25,7 +25,7 @@ export default function Footer() {
             </nav>
           </Box>
           <Text sx={styles.footer.copyright}>
-            Copyright {new Date().getFullYear()} Company Name
+            Copyright {new Date().getFullYear()} Carolyn Carlson
           </Text>
         </Box>
       </Container>

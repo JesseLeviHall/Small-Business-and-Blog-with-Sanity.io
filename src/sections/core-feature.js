@@ -12,7 +12,7 @@ const data = {
   subTitle: "Private Investigation Services",
   title: "What to look for when hiring a PI",
   description:
-    "When hiring a private investigator, remember, in this field, experience, trust, and professionalism are extremely import.",
+    "When hiring a private investigator, remember, in this field, experience, trust, and professionalism are extremely important.",
   btnName: "Get Started",
   btnURL: "workflow",
 };
