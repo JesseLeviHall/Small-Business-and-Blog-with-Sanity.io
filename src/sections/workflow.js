@@ -10,27 +10,27 @@ import ArrowEven from "assets/arrowEven.svg";
 const data = [
   {
     id: 1,
-    title: "Set disbursement Instructions",
+    title: "Select a service",
     text:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
+      "Check the services below. Optionally, you may request a consultation for your specific needs. ",
   },
   {
     id: 2,
-    title: "Assembly retrieves funds from your account",
+    title: "Submit the contact form",
     text:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
+      "Fill in the information including the service you need. Expect a prompt reply to work out details and confirm. ",
   },
   {
     id: 3,
-    title: "Assembly initiates disbursement",
+    title: "Await the investigation to be caried out",
     text:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
+      "Carolyn will conduct the job and keep in touch with you on the progress.",
   },
   {
     id: 4,
-    title: "Customer receives funds payment",
+    title: "Send payment upon completion",
     text:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
+      "Use the Venmo information below to pay for the results of your investigation",
   },
 ];
 
@@ -39,8 +39,8 @@ export default function WorkFlow() {
     <section sx={styles.workflow}>
       <Container>
         <SectionHeader
-          slogan="Another Slogan Header"
-          title="Meet the next title of a section here"
+          slogan="How Hiring Works"
+          title="Steps To Follow For Retaining PI Services"
           isWhite={true}
         />
         <Grid sx={styles.grid}>
@@ -156,7 +156,7 @@ const styles = {
       fontWeight: 400,
       lineHeight: [1.85, null, null, 1.9, 2],
       color: "white",
-      opacity: 0.75,
+      opacity: 0.85,
       pr: [0, null, null, null, null, 5],
     },
   },

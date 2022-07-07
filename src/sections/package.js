@@ -11,23 +11,23 @@ import { FaBluetooth } from "react-icons/fa";
 import packageData from "../data/packageData";
 
 export default function Package() {
-  const { monthly, annual } = packageData;
+  const { individual, business } = packageData;
 
   const [state, setState] = useState({
-    active: "monthly",
-    pricingPlan: monthly,
+    active: "individual",
+    pricingPlan: individual,
   });
 
   const handlePricingPlan = (plan) => {
-    if (plan === "annual") {
+    if (plan === "business") {
       setState({
-        active: "annual",
-        pricingPlan: annual,
+        active: "business",
+        pricingPlan: business,
       });
     } else {
       setState({
-        active: "monthly",
-        pricingPlan: monthly,
+        active: "individual",
+        pricingPlan: individual,
       });
     }
   };
@@ -77,26 +77,26 @@ export default function Package() {
     <section id="pricing" sx={{ variant: "section.pricing" }}>
       <Container>
         <SectionHeader
-          slogan="Pricing Slogan Here"
-          title="Here is where we put the prices for stuff"
+          slogan="Basic Services Breakdown"
+          title="Typical Services and Pricing"
         />
         <Flex sx={styles.buttonGroup}>
           <Box sx={styles.buttonGroupInner}>
             <button
               sx={styles.button}
-              className={state.active === "monthly" ? "active" : ""}
+              className={state.active === "individual" ? "active" : ""}
               type="button"
-              aria-label="monthly"
-              onClick={() => handlePricingPlan("monthly")}>
-              Monthly Plan
+              aria-label="individual"
+              onClick={() => handlePricingPlan("individual")}>
+              Individuals Pricing
             </button>
             <button
               sx={styles.button}
-              className={state.active === "annual" ? "active" : ""}
+              className={state.active === "business" ? "active" : ""}
               type="button"
-              aria-label="annual"
-              onClick={() => handlePricingPlan("annual")}>
-              Annual Plan
+              aria-label="business"
+              onClick={() => handlePricingPlan("business")}>
+              Business Pricing
             </button>
           </Box>
         </Flex>

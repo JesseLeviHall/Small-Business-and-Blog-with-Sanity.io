@@ -12,7 +12,7 @@ import CoreFeature from "../sections/core-feature";
 import WorkFlow from "../sections/workflow";
 import Package from "../sections/package";
 import TeamSection from "../sections/team-section";
-import TestimonialCard from "../sections/testimonial";
+import ServicesCard from "../sections/services";
 import BlogSection from "../sections/blog-section";
 import Subscribe from "../sections/subscribe";
 
@@ -20,16 +20,13 @@ export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-        <SEO title="NextJS Landing Page" />
+        <SEO title="Private Investigation Services" />
         <Banner />
-        <KeyFeature />
-        <ServiceSection />
         <Feature />
         <CoreFeature />
+        <ServicesCard />
         <WorkFlow />
         <Package />
-        <TeamSection />
-        <TestimonialCard />
         <BlogSection />
         <Subscribe />
       </Layout>

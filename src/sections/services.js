@@ -99,13 +99,13 @@ const carouselParams = {
   slidesToSlide: 1,
 };
 
-export default function TestimonialCard() {
+export default function ServicesCard() {
   return (
-    <section id="testimonial" sx={{ variant: "section.testimonial" }}>
+    <section id="services" sx={{ variant: "section.testimonial" }}>
       <Container css={{ textAlign: "center" }}>
         <SectionHeader
-          slogan="Testimonials here we go"
-          title="See what clients say about these services"
+          slogan="Types of Services"
+          title="What An Investigator Like Carolyn Carlson Can Do"
         />
       </Container>
       <Box sx={styles.carouselWrapper}>

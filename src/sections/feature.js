@@ -12,44 +12,44 @@ const data = [
   {
     id: 1,
     imgSrc: Performance,
-    altText: "Fast Performance",
-    title: "Fast Performance",
+    altText: "Professional Experience",
+    title: "Professional Experience",
     text:
-      "Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.",
+      "Decades of investigative journalism work as an independent business owner, staff writer, and freelancer.",
   },
   {
     id: 2,
     imgSrc: Partnership,
-    altText: "Pro Subscription",
-    title: "Pro Subscription",
+    altText: "Community Connection",
+    title: "Community Connection",
     text:
-      "We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.",
+      "Investigating important local issues cutlivatting a deep understanding of the voice of the community and its members has earnd Carolyn a vast network of professional connections built on trust and a committment to integrity social responsibility.",
   },
   {
     id: 3,
     imgSrc: Subscription,
-    altText: "Partnership deal",
-    title: "Partnership deal",
+    altText: "High Quality Results",
+    title: "High Quality Results",
     text:
-      "Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.",
+      "A tireless researcher and investigator, Caroylyn takes pride in delivering on time with high-standards and gets to the bottom of the issue by uncovering the facts.",
   },
   {
     id: 4,
     imgSrc: Support,
-    altText: "Customer Support",
-    title: "Customer Support",
+    altText: "Specialized Knowledge",
+    title: "Specialized Knowledge",
     text:
-      "We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.",
+      "Taking the time to study and learn each topic she investigates, Caryolyn is effective in gaining specialized knowledge for the job. She brings credibility to the investigation industry.",
   },
 ];
 
 export default function Feature() {
   return (
-    <section sx={{ variant: "section.feature" }}>
+    <section sx={{ variant: "section.feature" }} id="feature">
       <Container>
         <SectionHeader
-          slogan="Quality Features"
-          title="Amazing Useful title of section"
+          slogan="An Investigator Unlike Any Other"
+          title="Why Carolyn Carlson is unique"
         />
         <Grid sx={styles.grid}>
           {data.map((item) => (

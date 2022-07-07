@@ -29,7 +29,6 @@ export default function PriceCard({
       </Box>
       <Text className="package__price" sx={styles.price}>
         {priceWithUnit}
-        <span>Monthly</span>
       </Text>
       <Box sx={styles.buttonGroup}>
         <Button variant="primary" aria-label={buttonText}>
