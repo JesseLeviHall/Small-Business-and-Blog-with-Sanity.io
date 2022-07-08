@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button } from "theme-ui";
+import { jsx, Container, Flex, Button, Text } from "theme-ui";
 import { keyframes } from "@emotion/core";
-import { Link } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
+import Link from "next/link";
 import Logo from "components/logo";
 import LogoDark from "assets/logo.png";
 import MobileDrawer from "./mobile-drawer";
-import menuItems from "./header.data";
 
 export default function Header({ className }) {
   return (
@@ -13,26 +13,56 @@ export default function Header({ className }) {
       <Container sx={styles.container}>
         <Logo src={LogoDark} />
         <Flex as="nav" sx={styles.nav}>
-          {menuItems.map((Item, i) => (
-            <Link
-              activeClass="active"
-              to={Item.path}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              key={i}>
-              {Item.label}
+          <Scroll
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            Home
+          </Scroll>
+          <Scroll
+            activeClass="active"
+            to="features"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            Features
+          </Scroll>
+          <Scroll
+            activeClass="active"
+            to="services"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            Services
+          </Scroll>
+          <Scroll
+            activeClass="active"
+            to="pricing"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            Pricing
+          </Scroll>
+          <Scroll activeClass="active">
+            <Link href="/blog">
+              <a sx={{ color: "white" }}>Blog</a>
             </Link>
-          ))}
+          </Scroll>
         </Flex>
-
-        <Button
-          className="donate__btn"
-          variant="secondary"
-          aria-label="Get Started">
-          Contact
-        </Button>
+        <Link href="/contact">
+          <Button
+            className="contact__btn"
+            variant="secondary"
+            aria-label="contact">
+            Contact
+          </Button>
+        </Link>
         <MobileDrawer />
       </Container>
     </header>
@@ -64,7 +94,7 @@ const styles = {
     backgroundColor: "transparent",
     transition: "all 0.4s ease",
     animation: `${positionAnim} 0.4s ease`,
-    ".donate__btn": {
+    ".contact__btn": {
       flexShrink: 0,
       mr: [15, 20, null, null, 0],
       ml: ["auto", null, null, null, 0],

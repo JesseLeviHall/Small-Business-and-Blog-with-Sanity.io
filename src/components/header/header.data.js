@@ -15,8 +15,4 @@ export default [
     path: "pricing",
     label: "Pricing",
   },
-  {
-    path: "link",
-    label: "Blog",
-  },
 ];

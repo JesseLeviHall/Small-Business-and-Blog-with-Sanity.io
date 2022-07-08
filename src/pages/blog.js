@@ -1,52 +1,29 @@
+import React from "react";
+import { ThemeProvider } from "theme-ui";
+import theme from "theme";
 /** @jsx jsx */
+import { jsx } from "theme-ui";
 import { useState } from "react";
 import { Container, Flex, Box, Button, Input, Text, Heading } from "theme-ui";
 
-export default function Contact() {
-  const submit = (e) => {
-    e.preventDefault();
-  };
+export default function Blog() {
   return (
-    <section>
-      <Container>
-        <Box sx={styles.contentBox}>
-          <Box sx={styles.contentBoxInner}>
-            <Heading as="h2" sx={styles.title}>
-              Subscribe to our Blog
-            </Heading>
-            <Text as="p" sx={styles.description}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
-              tempor incididunt labore dolore.
-            </Text>
-            <form onSubmit={submit}>
-              <Flex sx={styles.subscribeForm}>
-                <label htmlFor="email" sx={{ variant: "styles.srOnly" }}>
-                  Email Address
-                </label>
-                <Input
-                  ref={inputEl}
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email address"
-                />
-                <Button
-                  type="submit"
-                  disabled={status.submitting}
-                  className="subscribe__btn"
-                  aria-label="Subscribe">
-                  {!status.submitting
-                    ? !status.submitted
-                      ? "Subscribe"
-                      : "Submitted"
-                    : "Submitting..."}
-                </Button>
-              </Flex>
-            </form>
+    <ThemeProvider theme={theme}>
+      <section sx={{ variant: "section.testimonial" }}>
+        <Container css={{ textAlign: "center" }}>
+          <Box sx={styles.contentBox}>
+            <Box sx={styles.contentBoxInner}>
+              <Heading as="h2" sx={styles.title}>
+                Making a Blog Here
+              </Heading>
+              <Text as="p" sx={styles.description}>
+                wont be long...
+              </Text>
+            </Box>
           </Box>
-        </Box>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </ThemeProvider>
   );
 }
 
@@ -65,7 +42,7 @@ const styles = {
   },
   title: {
     fontSize: ["24px", null, "28px", null, null, "32px", null, "36px"],
-    color: "white",
+    color: "black",
     lineHeight: [1.3, null, null, 1.25],
     fontWeight: "700",
     letterSpacing: ["-.5px", null, "-1.5px"],
@@ -73,7 +50,7 @@ const styles = {
   },
   description: {
     fontSize: ["15px", 2, null, null, null, "17px", null, 3],
-    color: "white",
+    color: "black",
     lineHeight: [1.85, null, null, 2],
     px: [0, null, 5],
   },

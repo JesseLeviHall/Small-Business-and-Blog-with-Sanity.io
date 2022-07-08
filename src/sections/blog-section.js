@@ -8,6 +8,7 @@ import Carousel from "react-multi-carousel";
 import PostThumb1 from "assets/blog/1.jpg";
 import PostThumb2 from "assets/blog/2.jpg";
 import PostThumb3 from "assets/blog/3.jpg";
+import PostThumb4 from "assets/blog/4.jpg";
 
 const data = [
   {
@@ -15,36 +16,36 @@ const data = [
     imgSrc: PostThumb1,
     altText: "Marketing",
     postLink: "#",
-    title: "Product Marketing: Monopoly Market",
+    title: "Top Ten Best Detectives in ABQ",
     authorName: "Cali Cartel",
-    date: "Oct 20, 2020",
+    date: "Sep 20, 2022",
   },
   {
     id: 2,
     imgSrc: PostThumb2,
     altText: "Creative",
     postLink: "#",
-    title: "Product Marketing: Creative Market",
+    title: "Number One Secret Private Investigars NEED to know",
     authorName: "James Carter",
-    date: "Oct 20, 2020",
+    date: "Oct 20, 2022",
   },
   {
     id: 3,
     imgSrc: PostThumb3,
     altText: "Startup",
     postLink: "#",
-    title: "Product Marketing: Startup Product Sales",
+    title: "How these 5 investigation tricks save time",
     authorName: "Aston Aagar",
-    date: "Oct 20, 2020",
+    date: "Sep 20, 2022",
   },
   {
     id: 4,
-    imgSrc: PostThumb2,
+    imgSrc: PostThumb4,
     altText: "Creative",
     postLink: "#",
-    title: "Product Marketing: Creative Market",
-    authorName: "James Carter",
-    date: "Oct 20, 2020",
+    title: "Nobody is talking about this genius tool for PI's ",
+    authorName: "Shamus Finningan",
+    date: "Sep 20, 2022",
   },
 ];
 
@@ -77,7 +78,7 @@ export default function BlogSection() {
       <Container>
         <SectionHeader
           slogan="From the Blog"
-          title="Check Out Recent Articles by Carolyn "
+          title="Check Out Recent Posts by Carolyn "
         />
 
         <Box sx={styles.carouselWrapper}>

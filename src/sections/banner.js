@@ -78,6 +78,7 @@ const styles = {
       width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
       mx: "auto",
       textAlign: "center",
+      mt: "40px",
       mb: ["40px", null, null, null, null, 7],
     },
     imageBox: {

@@ -1,13 +1,8 @@
 /** @jsx jsx */
-import { jsx, Container, Heading, Text, Box, Image } from "theme-ui";
+import { jsx, Container, Heading, Text, Box } from "theme-ui";
 import SectionHeader from "components/section-header";
 import ButtonGroup from "components/button-group";
 import Carousel from "react-multi-carousel";
-
-import Avatar1 from "assets/testimonial/avatar1.png";
-import Avatar2 from "assets/testimonial/avatar2.png";
-import Avatar3 from "assets/testimonial/avatar3.png";
-import Avatar4 from "assets/testimonial/avatar4.png";
 
 const data = [
   {
@@ -15,9 +10,6 @@ const data = [
     title: "Background Investigations",
     description:
       "The most common types of background checks search for criminal activity, verify employment and education, including identity verification, and request driving records.",
-    avatar: Avatar1,
-    name: "Denny Hilguston",
-    designation: "@denny.hil",
     review: 4,
   },
   {
@@ -25,9 +17,6 @@ const data = [
     title: "Gather evidence for cases or private matters",
     description:
       "Interview witnesses, verify information, conduct surveillance, find missing persons, and gather vital facts for cases. ",
-    avatar: Avatar2,
-    name: "Denny Hilguston",
-    designation: "@denny.hil",
     review: 5,
   },
   {
@@ -35,9 +24,6 @@ const data = [
     title: "Investigative Journalism",
     description:
       "Watchdog journalism that makes an impact. With decades of experience Carolyn specializes in investigative reporting and is available for hire.",
-    avatar: Avatar3,
-    name: "Denny Hilguston",
-    designation: "@denny.hil",
     review: 5,
   },
   {
@@ -45,9 +31,6 @@ const data = [
     title: "Covert Observations",
     description:
       "Help learn more about a subject by discreetly gathering information undercover, without arousing suspicions. Includes taking photos or recording audio or video. ",
-    avatar: Avatar4,
-    name: "Denny Hilguston",
-    designation: "@denny.hil",
     review: 4,
   },
 ];
