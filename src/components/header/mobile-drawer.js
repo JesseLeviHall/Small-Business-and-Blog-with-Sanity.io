@@ -13,25 +13,6 @@ import {
 } from "react-icons/fa";
 import menuItems from "./header.data";
 
-const social = [
-  {
-    path: "/",
-    icon: <FaFacebookF />,
-  },
-  {
-    path: "/",
-    icon: <FaTwitter />,
-  },
-  {
-    path: "/",
-    icon: <FaGithubAlt />,
-  },
-  {
-    path: "/",
-    icon: <FaDribbble />,
-  },
-];
-
 export default function MobileDrawer() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
@@ -67,15 +48,6 @@ export default function MobileDrawer() {
                 <a sx={{ color: "white" }}>Blog</a>
               </Link>
             </Scroll>
-          </Box>
-          <Box sx={styles.menuFooter}>
-            <Box sx={styles.social}>
-              {social.map((socialItem, i) => (
-                <Box as="span" key={i} sx={styles.social.icon}>
-                  <Scroll to={socialItem.path}>{socialItem.icon}</Scroll>
-                </Box>
-              ))}
-            </Box>
           </Box>
         </Box>
       </Scrollbars>
