@@ -62,7 +62,7 @@ export default function MobileDrawer() {
                 {Item.label}
               </Scroll>
             ))}
-            <Scroll activeClass="active">
+            <Scroll to="#" activeClass="active">
               <Link href="/blog">
                 <a sx={{ color: "white" }}>Blog</a>
               </Link>

@@ -49,9 +49,9 @@ export default function Header({ className }) {
             duration={500}>
             Pricing
           </Scroll>
-          <Scroll activeClass="active">
+          <Scroll to="#" activeClass="active">
             <Link href="/blog">
-              <a sx={{ color: "white" }}>Blog</a>
+              <span sx={{ color: "white" }}>Blog</span>
             </Link>
           </Scroll>
         </Flex>
