@@ -3,15 +3,15 @@ import { jsx } from "theme-ui";
 import { Container, Grid } from "theme-ui";
 import SectionHeader from "components/section-header";
 import FeatureCard from "components/feature-card.js";
-import Performance from "assets/feature/performance.svg";
-import Partnership from "assets/feature/partnership.svg";
-import Subscription from "assets/feature/subscription.svg";
-import Support from "assets/feature/support.svg";
+import Performance from "assets/feature/performance.png";
+import Partnership from "assets/feature/partnership.png";
+import Knowledge from "assets/feature/knowledge.png";
+import Experience from "assets/feature/experience.png";
 
 const data = [
   {
     id: 1,
-    imgSrc: Performance,
+    imgSrc: Experience,
     altText: "Professional Experience",
     title: "Professional Experience",
     text:
@@ -27,7 +27,7 @@ const data = [
   },
   {
     id: 3,
-    imgSrc: Subscription,
+    imgSrc: Performance,
     altText: "High Quality Results",
     title: "High Quality Results",
     text:
@@ -35,7 +35,7 @@ const data = [
   },
   {
     id: 4,
-    imgSrc: Support,
+    imgSrc: Knowledge,
     altText: "Specialized Knowledge",
     title: "Specialized Knowledge",
     text:
