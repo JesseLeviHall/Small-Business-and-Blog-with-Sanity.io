@@ -1,6 +1,7 @@
 import { Box, Card, Text, Heading, Button } from "theme-ui";
 import React from "react";
 import List from "./list";
+import Link from "next/link";
 
 export default function PriceCard({
   data: {
@@ -31,9 +32,11 @@ export default function PriceCard({
         {priceWithUnit}
       </Text>
       <Box sx={styles.buttonGroup}>
-        <Button variant="primary" aria-label={buttonText}>
-          {buttonText}
-        </Button>
+        <Link href="/contact">
+          <Button variant="primary" aria-label={buttonText}>
+            {buttonText}
+          </Button>
+        </Link>
         {anotherOption && (
           <Button
             variant="textButton"

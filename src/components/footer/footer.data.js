@@ -10,7 +10,7 @@ export default {
       label: "Report A Problem",
     },
     {
-      path: "/",
+      path: "/contact",
       label: "Contact",
     },
   ],

@@ -77,7 +77,7 @@ export default {
       description: "Research A Person Or Issue",
       priceWithUnit: "$300 Base",
       buttonText: "Request This Service",
-      anotherOption: "$70 Hourly after first day",
+      anotherOption: "$70 Hourly after initial 8 hours",
       points: [
         {
           id: 1,
@@ -112,7 +112,7 @@ export default {
       name: "Basic Background Bulk",
       description: "Background Check Multiple",
       buttonText: "Request This Service",
-      priceWithUnit: "$100",
+      priceWithUnit: "$100 Per Check",
       anotherOption: "Or $300 Monthly",
       points: [
         {
@@ -181,9 +181,9 @@ export default {
       headerIcon: <IoIosCheckmarkCircle />,
       name: "Personal Investigation",
       description: "Research A Person Or Issue",
-      priceWithUnit: "$500 base",
+      priceWithUnit: "$500 Base Price",
       buttonText: "Request This Service",
-      anotherOption: "$70 Hourly after first day",
+      anotherOption: "$70 Hourly after initial 8 hours",
       points: [
         {
           id: 1,

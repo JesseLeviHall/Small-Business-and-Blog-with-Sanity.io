@@ -24,7 +24,7 @@ export default function Header({ className }) {
           </Scroll>
           <Scroll
             activeClass="active"
-            to="features"
+            to="feature"
             spy={true}
             smooth={true}
             offset={-70}
