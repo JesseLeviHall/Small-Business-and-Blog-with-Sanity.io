@@ -9,8 +9,8 @@ export default {
     background_secondary: "#F9FBFD", // secondary background color
     border_color: "#E5ECF4", // border color
     yellow: "#FFA740", // border color
-    primary: "#EA3A60", // primary button and link color
-    secondary: "#2563FF", // secondary color - can be used for hover states
+    primary: "#0cf", // primary button and link color
+    secondary: "#09c", // secondary color - can be used for hover states
     muted: "#E4E4E4", // muted color
     accent: "#609", // a contrast color for emphasizing UI
 
@@ -70,7 +70,7 @@ export default {
       px: [4, 6],
     },
     header: {
-      color: "#02073E",
+      color: "#03f0fc",
       fontWeight: "normal",
       py: 3,
       position: "absolute",
@@ -187,7 +187,7 @@ export default {
       fontWeight: "500",
       lineHeight: "60px",
       letterSpacing: "-1.5px",
-      color: "#0F2137",
+      color: "#0cf",
     },
     muted: {
       lineHeight: "26px",
@@ -195,7 +195,7 @@ export default {
     },
     secondary: {
       fontWeight: 500,
-      color: "#00A99D",
+      color: "#09c",
       lineHeight: "40px",
     },
   },
@@ -312,7 +312,7 @@ export default {
       minHeight: 130,
       m: 2,
       background: "#FFFFFF",
-      border: "1px solid #EDEFF6",
+      border: "1px solid #0cf",
       borderRadius: 5,
     },
     featureCard: {
