@@ -115,17 +115,6 @@ export default function ServicesCard() {
                 {item.title}
               </Heading>
               <Text sx={styles.description}>{item.description}</Text>
-              <div className="card-footer">
-                <div className="image">
-                  <Image src={item.avatar} alt="Client Image" />
-                </div>
-                <div className="reviewer-info">
-                  <heading as="h4" sx={styles.heading}>
-                    {item.name}
-                  </heading>
-                  <Text sx={styles.designation}>{item.designation}</Text>
-                </div>
-              </div>
             </Box>
           ))}
         </Carousel>
@@ -232,7 +221,7 @@ const styles = {
     },
   },
   title: {
-    fontSize: [1, 2],
+    fontSize: [2, 4],
     fontWeight: 700,
     mb: [3, null, null, "22px"],
     color: "#8f85ff",

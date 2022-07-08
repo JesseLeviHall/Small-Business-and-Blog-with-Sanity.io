@@ -81,7 +81,7 @@ export default function Subscribe() {
             </Heading>
             <Text as="p" sx={styles.description}>
               Stay informed about what is going on in Albuquerque through
-              Carolyn's coverage of local issues.
+              Carolyn's posts.
             </Text>
             <form onSubmit={subscribe}>
               <Flex sx={styles.subscribeForm}>

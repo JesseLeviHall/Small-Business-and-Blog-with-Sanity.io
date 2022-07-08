@@ -1,12 +1,7 @@
 /** @jsx jsx */
 import { jsx, Image, Box, Heading, Text } from "theme-ui";
 
-export default function FeatureCard({
-  src,
-  altText = "default alt text",
-  title,
-  text,
-}) {
+export default function FeatureCard({ src, altText, title, text }) {
   return (
     <Box sx={styles.card}>
       <Image src={src} altText={altText} sx={styles.img} />
@@ -26,7 +21,7 @@ const styles = {
   },
 
   img: {
-    width: ["70px", null, null, "80px", "90px", "auto"],
+    width: ["70px", null, null, "80px", "90px", "90px"],
     height: "auto",
     flexShrink: 0,
     mr: [2, 3, null, null, 4, 5],
