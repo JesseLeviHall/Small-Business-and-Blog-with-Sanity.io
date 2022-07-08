@@ -75,8 +75,9 @@ export default {
       headerIcon: <IoIosCheckmarkCircle />,
       name: "Personal Investigation",
       description: "Research A Person Or Issue",
-      priceWithUnit: "$300",
+      priceWithUnit: "$300 Base",
       buttonText: "Request This Service",
+      anotherOption: "$70 Hourly after first day",
       points: [
         {
           id: 1,
@@ -180,8 +181,9 @@ export default {
       headerIcon: <IoIosCheckmarkCircle />,
       name: "Personal Investigation",
       description: "Research A Person Or Issue",
-      priceWithUnit: "$400",
+      priceWithUnit: "$500 base",
       buttonText: "Request This Service",
+      anotherOption: "$70 Hourly after first day",
       points: [
         {
           id: 1,
