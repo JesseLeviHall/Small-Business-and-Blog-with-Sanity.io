@@ -166,7 +166,7 @@ export default {
       mb: [4, null, null, null, null, 5],
     },
     heroSecondary: {
-      fontSize: [2, null, "17px", null, null, "19px", 4],
+      fontSize: [2, null, "22px", null, null, "28px", 4],
       lineHeight: [1.9, null, null, 2],
       fontWeight: "body",
       mb: 5,

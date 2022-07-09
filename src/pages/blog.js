@@ -1,92 +1,187 @@
-import React from "react";
+import imageUrlBuilder from "@sanity/image-url";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import ShapeLeft from "../assets/shape-left.png";
+import ShapeRight from "../assets/shape-right.png";
 import { ThemeProvider } from "theme-ui";
+import LayoutBlog from "components/layoutBlog";
+import moment from "moment";
 import theme from "theme";
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { useState } from "react";
-import { Container, Flex, Box, Button, Input, Text, Heading } from "theme-ui";
+import { Container, Image, Flex, Box, Button, Text, Heading } from "theme-ui";
 
-export default function Blog() {
+export default function Blog({ posts }) {
+  const router = useRouter();
+  const [mappedPosts, setMappedPosts] = useState([]);
+
+  useEffect(() => {
+    if (posts.length) {
+      const imgBuilder = imageUrlBuilder({
+        projectId: "6f7brgic",
+        dataset: "production",
+      });
+
+      setMappedPosts(
+        posts.map((p) => {
+          return {
+            ...p,
+            mainImage: imgBuilder.image(p.mainImage).width(500).height(250),
+          };
+        })
+      );
+    } else {
+      setMappedPosts([]);
+    }
+  }, [posts]);
+
   return (
     <ThemeProvider theme={theme}>
-      <section sx={{ variant: "section.testimonial" }}>
-        <Container css={{ textAlign: "center" }}>
-          <Box sx={styles.contentBox}>
-            <Box sx={styles.contentBoxInner}>
-              <Heading as="h2" sx={styles.title}>
-                Making a Blog Here
-              </Heading>
-              <Text as="p" sx={styles.description}>
-                wont be long...
-              </Text>
-            </Box>
-          </Box>
-        </Container>
-      </section>
+      <LayoutBlog>
+        <section sx={styles.post}>
+          <Container css={{ textAlign: "center", background: "#defbfc" }}>
+            {mappedPosts.length ? (
+              mappedPosts.map((p, index) => (
+                <Box sx={styles.card} key={index}>
+                  <Box sx={styles.thumbnail}>
+                    <Image src={p.mainImage} alt="thumbnail" />
+                  </Box>
+
+                  <Flex sx={styles.postContent}>
+                    <Heading
+                      onClick={() => router.push(`/post/${p.slug.current}`)}
+                      sx={styles.title}>
+                      {p.title}
+                    </Heading>
+
+                    <Flex sx={styles.postFooter}>
+                      <Text sx={styles.postFooter.date}>
+                        {moment(p.publishedAt).format("MM-DD-YY")}
+                      </Text>
+                    </Flex>
+                  </Flex>
+                </Box>
+              ))
+            ) : (
+              <>No Posts Yet</>
+            )}
+          </Container>
+        </section>
+      </LayoutBlog>
     </ThemeProvider>
   );
 }
 
+export const getServerSideProps = async (pageContext) => {
+  const query = encodeURIComponent('*[ _type == "post" ]');
+  const url = `https://6f7brgic.api.sanity.io/v1/data/query/production?query=${query}`;
+  const result = await fetch(url).then((res) => res.json());
+
+  if (!result.result || !result.result.length) {
+    return {
+      props: {
+        posts: [],
+      },
+    };
+  } else {
+    return {
+      props: {
+        posts: result.result,
+      },
+    };
+  }
+};
+
 const styles = {
-  contentBox: {
-    backgroundColor: "primary",
-    textAlign: "center",
-    borderRadius: 10,
-    py: ["60px", null, 8],
+  post: {
+    pt: ["140px", "145px", "155px", "170px", null, null, "180px", "215px"],
+    pb: [2, null, 0, null, 2, 0, null, 5],
+    position: "relative",
+    zIndex: 2,
+    "&::before": {
+      position: "absolute",
+      content: '""',
+      bottom: 6,
+      left: 0,
+      height: "100%",
+      width: "100%",
+      zIndex: -1,
+      backgroundImage: `url(${ShapeLeft})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundPosition: "bottom left",
+      backgroundSize: "36%",
+    },
+    "&::after": {
+      position: "absolute",
+      content: '""',
+      bottom: "40px",
+      right: 0,
+      height: "100%",
+      width: "100%",
+      zIndex: -1,
+      backgroundImage: `url(${ShapeRight})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundPosition: "bottom right",
+      backgroundSize: "32%",
+    },
   },
-  contentBoxInner: {
-    width: ["100%", null, "540px", "600px"],
-    mx: "auto",
-    mt: -1,
-    px: [3, 5],
+  card: {
+    backgroundColor: "white",
+    boxShadow: "0px 4px 10px rgba(38,78,118,0.12)",
+    borderRadius: "7px",
+    pt: "20px",
+    m: "0 15px 140px",
+    transition: "all 0.3s",
+    "&:hover": {
+      boxShadow: "0px 5px 20px rgba(38,78,118,0.15)",
+    },
+  },
+
+  thumbnail: {
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+    borderRadius: "7px",
+    overflow: "hidden",
+    display: "flex",
+    img: {
+      borderRadius: "7px",
+      minWidth: "25%",
+    },
+  },
+  postContent: {
+    flexDirection: "column",
+    justifyContent: "space-between",
+    padding: ["15px 20px", "25px 30px"],
   },
   title: {
-    fontSize: ["24px", null, "28px", null, null, "32px", null, "36px"],
+    fontSize: [3, null, null, null, null, 4],
     color: "black",
-    lineHeight: [1.3, null, null, 1.25],
-    fontWeight: "700",
-    letterSpacing: ["-.5px", null, "-1.5px"],
-    mb: [2, 3],
-  },
-  description: {
-    fontSize: ["15px", 2, null, null, null, "17px", null, 3],
-    color: "black",
-    lineHeight: [1.85, null, null, 2],
-    px: [0, null, 5],
-  },
-  subscribeForm: {
-    mt: [6, null, null, 7],
-    backgroundColor: ["transparent", "white"],
-    borderRadius: [0, 50],
-    overflow: "hidden",
-    p: [0, 1],
-    flexDirection: ["column", "row"],
-    '[type="email"]': {
-      border: 0,
-      borderRadius: 50,
-      fontFamily: "body",
-      fontSize: ["14px", null, 2],
-      fontWeight: 500,
-      color: "heading",
-      py: 1,
-      px: [4, null, 6],
-      backgroundColor: ["white", "transparent"],
-      height: ["52px", null, "60px"],
-      textAlign: ["center", "left"],
-      "&:focus": {
-        boxShadow: "0 0 0 0px",
-      },
-      "::placeholder": {
-        color: "primary",
-        opacity: 1,
-      },
+    lineHeight: [1.4, 1.5],
+    fontWeight: 700,
+    mb: [3, 4, 5],
+    pr: [0, null, null, null, 5],
+    transition: "all 0.3s",
+    "&:hover": {
+      boxShadow: "0px 5px 20px rgba(38,78,118,0.15)",
     },
-    ".subscribe__btn": {
-      flexShrink: 0,
-      ml: [0, 2],
-      backgroundColor: ["text", "primary"],
-      mt: [2, 0],
-      py: ["15px"],
+  },
+  postFooter: {
+    width: "25%",
+    justifyContent: "space-between",
+    alignText: "center",
+    name: {
+      fontSize: ["18px", null, 2],
+      fontWeight: 500,
+      color: "secondary",
+      lineHeight: 1.4,
+    },
+    date: {
+      textAlign: "center",
+      fontSize: ["18px", null, 2],
+      fontWeight: 400,
+      lineHeight: 1.5,
+      color: "secondary",
     },
   },
 };
