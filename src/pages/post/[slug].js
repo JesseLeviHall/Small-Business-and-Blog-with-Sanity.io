@@ -3,6 +3,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import ShapeLeft from "../../assets/shape-left.png";
 import ShapeRight from "../../assets/shape-right.png";
+import { URL, PROID } from "../../../config";
 import { ThemeProvider } from "theme-ui";
 import LayoutBlog from "components/layoutBlog";
 import moment from "moment";
@@ -16,7 +17,7 @@ export const Post = ({ title, body, image, published }) => {
 
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
-      projectId: "6f7brgic",
+      projectId: PROID,
       dataset: "production",
     });
 
@@ -74,7 +75,7 @@ export const getServerSideProps = async (pageContext) => {
   const query = encodeURIComponent(
     `*[ _type == "post" && slug.current == "${pageSlug}" ]`
   );
-  const url = `https://6f7brgic.api.sanity.io/v1/data/query/production?query=${query}`;
+  const url = URL;
 
   const result = await fetch(url).then((res) => res.json());
   const post = result.result[0];

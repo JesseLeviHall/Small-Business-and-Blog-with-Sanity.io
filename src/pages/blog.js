@@ -5,6 +5,7 @@ import ShapeLeft from "../assets/shape-left.png";
 import ShapeRight from "../assets/shape-right.png";
 import { ThemeProvider } from "theme-ui";
 import LayoutBlog from "components/layoutBlog";
+import { URL, PROID } from "../../config";
 import moment from "moment";
 import theme from "theme";
 /** @jsx jsx */
@@ -18,7 +19,7 @@ export default function Blog({ posts }) {
   useEffect(() => {
     if (posts.length) {
       const imgBuilder = imageUrlBuilder({
-        projectId: "6f7brgic",
+        projectId: PROID,
         dataset: "production",
       });
 
@@ -74,7 +75,7 @@ export default function Blog({ posts }) {
 
 export const getServerSideProps = async (pageContext) => {
   const query = encodeURIComponent('*[ _type == "post" ]');
-  const url = `https://6f7brgic.api.sanity.io/v1/data/query/production?query=${query}`;
+  const url = URL;
   const result = await fetch(url).then((res) => res.json());
 
   if (!result.result || !result.result.length) {
