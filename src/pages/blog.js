@@ -5,7 +5,7 @@ import ShapeLeft from "../assets/shape-left.png";
 import ShapeRight from "../assets/shape-right.png";
 import { ThemeProvider } from "theme-ui";
 import LayoutBlog from "components/layoutBlog";
-import YOURL from "../../config";
+import { YOURL } from "../../config";
 import moment from "moment";
 import theme from "theme";
 /** @jsx jsx */

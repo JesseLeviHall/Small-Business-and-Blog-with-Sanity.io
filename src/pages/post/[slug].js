@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
-import SLUGURL from "../../../config";
+import { SLUGURL } from "../../../config";
 import ShapeLeft from "../../assets/shape-left.png";
 import ShapeRight from "../../assets/shape-right.png";
 import { ThemeProvider } from "theme-ui";
