@@ -1,5 +1,10 @@
 const query = encodeURIComponent('*[ _type == "post" ]');
 
-export const URL = `https://6f7brgic.api.sanity.io/v1/data/query/production?query=${query}`;
+export const YOURL = process.env.SANITYURL + `${query}`;
 
-export const PROID = "6f7brgic";
+export const PROID = process.env.PROJECTID;
+export const ID = toString(PROID);
+
+export const DATASET = process.env.DATASET_NAME;
+
+export const SLUGURL = process.env.SANITYURL;

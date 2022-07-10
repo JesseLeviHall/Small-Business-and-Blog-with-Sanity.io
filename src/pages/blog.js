@@ -5,7 +5,7 @@ import ShapeLeft from "../assets/shape-left.png";
 import ShapeRight from "../assets/shape-right.png";
 import { ThemeProvider } from "theme-ui";
 import LayoutBlog from "components/layoutBlog";
-import { URL, PROID } from "../../config";
+import YOURL from "../../config";
 import moment from "moment";
 import theme from "theme";
 /** @jsx jsx */
@@ -19,7 +19,7 @@ export default function Blog({ posts }) {
   useEffect(() => {
     if (posts.length) {
       const imgBuilder = imageUrlBuilder({
-        projectId: PROID,
+        projectId: "6f7brgic",
         dataset: "production",
       });
 
@@ -75,8 +75,8 @@ export default function Blog({ posts }) {
 
 export const getServerSideProps = async (pageContext) => {
   const query = encodeURIComponent('*[ _type == "post" ]');
-  const url = URL;
-  const result = await fetch(url).then((res) => res.json());
+
+  const result = await fetch(YOURL).then((res) => res.json());
 
   if (!result.result || !result.result.length) {
     return {

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
+import SLUGURL from "../../../config";
 import ShapeLeft from "../../assets/shape-left.png";
 import ShapeRight from "../../assets/shape-right.png";
-import { URL, PROID } from "../../../config";
 import { ThemeProvider } from "theme-ui";
 import LayoutBlog from "components/layoutBlog";
 import moment from "moment";
@@ -17,7 +17,7 @@ export const Post = ({ title, body, image, published }) => {
 
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
-      projectId: PROID,
+      projectId: "6f7brgic",
       dataset: "production",
     });
 
@@ -53,7 +53,17 @@ export const Post = ({ title, body, image, published }) => {
               </Text>
               <hr variant="hr"></hr>
               <Text sx={{ textAlign: "left", color: "black" }}>
-                <BlockContent blocks={body} />
+                <BlockContent
+                  blocks={body}
+                  imageOptions={{
+                    w: 320,
+                    h: 240,
+                    fit: "max",
+                    position: "relative",
+                  }}
+                  projectId="6f7brgic"
+                  dataset="production"
+                />
               </Text>
             </Box>
           </Container>
@@ -75,7 +85,7 @@ export const getServerSideProps = async (pageContext) => {
   const query = encodeURIComponent(
     `*[ _type == "post" && slug.current == "${pageSlug}" ]`
   );
-  const url = URL;
+  const url = SLUGURL + query;
 
   const result = await fetch(url).then((res) => res.json());
   const post = result.result[0];
