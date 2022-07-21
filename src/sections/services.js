@@ -9,29 +9,35 @@ const data = [
     id: 1,
     title: "Background Investigations",
     description:
-      "The most common types of background checks search for criminal activity, verify employment and education, including identity verification, and request driving records.",
+      "Ranging from simple locate reports to more comprehensive checks including employment, media and social media sweeps, criminal background, and requests for records.",
     review: 4,
   },
   {
     id: 2,
     title: "Gather evidence for cases or private matters",
     description:
-      "Interview witnesses, verify information, conduct surveillance, find missing persons, and gather vital facts for cases. ",
+      "includes jury and trial support such as interviews of witnesses, verify information, conduct surveillance, find missing persons, and gather vital facts for cases. ",
     review: 5,
   },
   {
     id: 3,
-    title: "Investigative Journalism",
+    title: "Crime Victim Support",
     description:
-      "Watchdog journalism that makes an impact. With decades of experience Carolyn specializes in investigative reporting and is available for hire.",
+      "Help victims gather evidence to support and document losses for restitution, connect with appropriate community resources available for crime victims.",
     review: 5,
   },
   {
     id: 4,
-    title: "Covert Observations",
+    title: "Covert Serveillance",
     description:
-      "Help learn more about a subject by discreetly gathering information undercover, without arousing suspicions. Includes taking photos or recording audio or video. ",
+      "Learn more about a subject by discreetly gathering information. Includes taking photos or recording audio, video, and even aerial surveylance with drones.",
     review: 4,
+  },
+  {
+    id: 5,
+    title: "Process Serving",
+    description:
+      "CC Investigations offers document courier services and process serving.",
   },
 ];
 
@@ -87,7 +93,7 @@ export default function ServicesCard() {
       <Container css={{ textAlign: "center" }}>
         <SectionHeader
           slogan="Types of Services"
-          title="What An Investigator Like Carolyn Carlson Can Do"
+          title="What CC Investigations Offers"
         />
       </Container>
       <Box sx={styles.carouselWrapper}>

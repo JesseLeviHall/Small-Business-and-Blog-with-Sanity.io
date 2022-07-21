@@ -4,15 +4,17 @@ export default {
   individual: [
     {
       id: 1,
-      name: "Basic Background",
-      description: "Get Routine Background",
+      header: "Customizable",
+      name: "Routine Background",
+      description: "Individual Background",
       buttonText: "Request This Service",
       priceWithUnit: "$50",
+      anotherOption: "Starting Price",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: "Online Background Info",
+          text: "Social Media Sweep",
           isAvailable: true,
         },
         {
@@ -42,6 +44,7 @@ export default {
       description: "Additional Custom Research",
       priceWithUnit: "$150",
       buttonText: "Request This Service",
+      anotherOption: "Starting Price",
       points: [
         {
           id: 1,
@@ -52,19 +55,19 @@ export default {
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "Address History",
+          text: "Adoption Information",
           isAvailable: true,
         },
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: "Work History",
+          text: "Locate Missing People",
           isAvailable: true,
         },
         {
           id: 4,
           icon: <IoIosCheckmarkCircle />,
-          text: "Criminal History ",
+          text: "Covert Surveillance",
           isAvailable: true,
         },
       ],
@@ -109,16 +112,17 @@ export default {
   business: [
     {
       id: 1,
-      name: "Basic Background Bulk",
-      description: "Background Check Multiple",
+      header: "Customizable",
+      name: "Background Check",
+      description: "Simple to Comprehensive",
       buttonText: "Request This Service",
-      priceWithUnit: "$100 Per Check",
-      anotherOption: "Or $300 Monthly",
+      priceWithUnit: "$100 starting",
+      anotherOption: "+ $70 Hourly",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: "Online Background Info",
+          text: "Social Media Sweep",
           isAvailable: true,
         },
         {
@@ -130,7 +134,7 @@ export default {
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: "Work History",
+          text: "Employment History",
           isAvailable: true,
         },
         {
@@ -144,33 +148,34 @@ export default {
     {
       id: 2,
       header: "Customizable",
-      name: "Background Plus",
-      description: "Additional Custom Research",
+      name: "Process Service",
+      description: "Process and Document Courier",
       priceWithUnit: "$150",
       buttonText: "Request This Service",
+      anotherOption: "Starting Price",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: "Research Specific Topic",
+          text: "Subpoena",
           isAvailable: true,
         },
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "Address History",
+          text: "Summons",
           isAvailable: true,
         },
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: "Work History",
+          text: "Orders",
           isAvailable: true,
         },
         {
           id: 4,
           icon: <IoIosCheckmarkCircle />,
-          text: "Criminal History ",
+          text: "Document Retrieval",
           isAvailable: true,
         },
       ],
@@ -179,8 +184,8 @@ export default {
       id: 3,
       header: "Customizable",
       headerIcon: <IoIosCheckmarkCircle />,
-      name: "Personal Investigation",
-      description: "Research A Person Or Issue",
+      name: "Investigation Reports",
+      description: "Jury and Trial Support",
       priceWithUnit: "$500 Base Price",
       buttonText: "Request This Service",
       anotherOption: "$70 Hourly after initial 8 hours",

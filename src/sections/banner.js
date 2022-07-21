@@ -12,12 +12,11 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            Fast Easy Private Investigation Services
+            Licensed and Bonded Private Investigation Services
           </Heading>
           <Text as="p" variant="heroSecondary">
             Checkout the services section to find what you need. For personal
-            consultation to discuss your needs feel free to email for
-            scheduling.
+            consultation to discuss your needs feel free to email.
           </Text>
           <Link
             to="workflow"
@@ -45,7 +44,7 @@ const styles = {
     "&::before": {
       position: "absolute",
       content: '""',
-      bottom: 6,
+      bottom: 4,
       left: 0,
       height: "100%",
       width: "100%",
@@ -54,19 +53,21 @@ const styles = {
       backgroundRepeat: `no-repeat`,
       backgroundPosition: "bottom left",
       backgroundSize: "36%",
+      opacity: "60%",
     },
     "&::after": {
       position: "absolute",
       content: '""',
-      bottom: "40px",
+      bottom: "30px",
       right: 0,
       height: "100%",
       width: "100%",
       zIndex: -1,
       backgroundImage: `url(${ShapeRight})`,
       backgroundRepeat: `no-repeat`,
-      backgroundPosition: "bottom right",
+      backgroundPosition: "right",
       backgroundSize: "32%",
+      opacity: "60%",
     },
     container: {
       minHeight: "inherit",
@@ -78,8 +79,8 @@ const styles = {
       width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
       mx: "auto",
       textAlign: "center",
-      mt: "40px",
-      mb: ["40px", null, null, null, null, 7],
+      mt: "30px",
+      mb: ["0px", null, null, null, null, 7],
     },
     imageBox: {
       justifyContent: "center",
@@ -88,7 +89,7 @@ const styles = {
       mb: [0, null, -6, null, null, "-40px", null, -3],
       img: {
         position: "relative",
-        height: [245, "auto"],
+        height: [100, "auto"],
       },
     },
   },

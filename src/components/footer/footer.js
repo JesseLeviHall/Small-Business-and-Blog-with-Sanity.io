@@ -25,7 +25,7 @@ export default function Footer() {
             </nav>
           </Box>
           <Text sx={styles.footer.copyright}>
-            Copyright {new Date().getFullYear()} Carolyn Carlson
+            Copyright {new Date().getFullYear()} CC Investigations
           </Text>
         </Box>
       </Container>
@@ -57,7 +57,7 @@ const styles = {
 
     link: {
       fontSize: [1, "15px"],
-      color: "text",
+      color: "white",
       fontWeight: "400",
       mb: 2,
       cursor: "pointer",
@@ -73,6 +73,7 @@ const styles = {
     copyright: {
       fontSize: [1, "15px"],
       width: "100%",
+      color: "white",
     },
   },
 };

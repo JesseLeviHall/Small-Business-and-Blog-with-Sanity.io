@@ -23,7 +23,7 @@ const data = [
     altText: "Community Connection",
     title: "Community Connection",
     text:
-      "Investigating important local issues cutlivatting a deep understanding of the voice of the community and its members has earnd Carolyn a vast network of professional connections built on trust and a committment to integrity social responsibility.",
+      "Investigating important local issues has cutlivated a deep understanding of the voice of the community and its members. CC Investigations has earnd a vast network of professional connections built on trust and a committment to integrity and social responsibility.",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const data = [
     altText: "High Quality Results",
     title: "High Quality Results",
     text:
-      "A tireless researcher and investigator, Caroylyn takes pride in delivering on time with high-standards and gets to the bottom of the issue by uncovering the facts.",
+      "As tireless researcher and investigator, CC Investigations takes pride in delivering high-quality timely results and gets to the bottom of the issue by uncovering the facts.",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const data = [
     altText: "Specialized Knowledge",
     title: "Specialized Knowledge",
     text:
-      "Taking the time to study and learn each topic she investigates, Caryolyn is effective in gaining specialized knowledge for the job. She brings credibility to the investigation industry.",
+      "With an approach characterized by diligence and equanimity, CC Investigations is effective in gaining specialized knowledge. Corroboration and credibility are essential to each investigation.",
   },
 ];
 
@@ -48,8 +48,8 @@ export default function Feature() {
     <section sx={{ variant: "section.feature" }} id="feature">
       <Container>
         <SectionHeader
-          slogan="An Investigator Unlike Any Other"
-          title="Why Carolyn Carlson is unique"
+          slogan="Special Features"
+          title="Why CC Investigations Is Unique"
         />
         <Grid sx={styles.grid}>
           {data.map((item) => (

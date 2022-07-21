@@ -45,7 +45,7 @@ export default function MobileDrawer() {
             ))}
             <Scroll to="#" activeClass="active">
               <Link href="/blog">
-                <a sx={{ color: "white" }}>Blog</a>
+                <p sx={{ color: "white" }}>Blog</p>
               </Link>
             </Scroll>
           </Box>

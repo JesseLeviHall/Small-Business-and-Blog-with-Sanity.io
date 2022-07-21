@@ -84,7 +84,7 @@ const positionAnim = keyframes`
 
 const styles = {
   header: {
-    color: "text",
+    color: "white",
     fontWeight: "body",
     py: 4,
     width: "100%",

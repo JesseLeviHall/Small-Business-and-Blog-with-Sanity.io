@@ -2,10 +2,10 @@ import React from "react";
 import Head from "next/head";
 
 export default function SEO({
-  description = "Carlson Private Investigations",
-  author = "Carolyn Carlson",
+  description = "Private Investigation Services",
+  author = "Albuquerque New Mexico",
   meta,
-  title = "Private Investigation Services",
+  title = "CC Investigations",
 }) {
   const metaData = [
     {

@@ -78,7 +78,7 @@ export default function Package() {
       <Container>
         <SectionHeader
           slogan="Basic Services Breakdown"
-          title="General Services and Pricing"
+          title="General Services and Starting Prices"
         />
         <Flex sx={styles.buttonGroup}>
           <Box sx={styles.buttonGroupInner}>
