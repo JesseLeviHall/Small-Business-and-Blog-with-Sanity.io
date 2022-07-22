@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "theme-ui";
 import theme from "theme";
+import Test from "../sections/test";
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { useState } from "react";

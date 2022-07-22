@@ -5,10 +5,7 @@ import SectionHeader from "components/section-header";
 import PostCard from "components/post-card.js";
 import ButtonGroup from "components/button-group";
 import Carousel from "react-multi-carousel";
-import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { YOURL } from "../../config";
 import moment from "moment";
 import PostThumb1 from "assets/blog/1.jpg";
 import PostThumb2 from "assets/blog/2.jpg";
@@ -77,49 +74,8 @@ const responsive = {
   },
 };
 
-export const getServerSideProps = async (pageContext) => {
-  const query = encodeURIComponent('*[ _type == "post" ]');
-
-  const result = await fetch(YOURL).then((res) => res.json());
-
-  if (!result.result || !result.result.length) {
-    return {
-      props: {
-        posts: [],
-      },
-    };
-  } else {
-    return {
-      props: {
-        posts: result.result,
-      },
-    };
-  }
-};
-
-export default function BlogSection({ posts }) {
+export default function BlogSection({ mappedPosts }) {
   const router = useRouter();
-  const [mappedPosts, setMappedPosts] = useState([]);
-
-  useEffect(() => {
-    if (posts) {
-      const imgBuilder = imageUrlBuilder({
-        projectId: "6f7brgic",
-        dataset: "production",
-      });
-
-      setMappedPosts(
-        posts.map((p) => {
-          return {
-            ...p,
-            mainImage: imgBuilder.image(p.mainImage).width(500).height(250),
-          };
-        })
-      );
-    } else {
-      setMappedPosts([]);
-    }
-  }, [posts]);
 
   return (
     <section sx={{ variant: "section.news" }}>
@@ -157,7 +113,7 @@ export default function BlogSection({ posts }) {
                   key={index}
                   src={p.mainImage}
                   alt="thumbnail"
-                  postLink={""}
+                  postLink={`/post/${p.slug.current}`}
                   title={p.title}
                   authorName={"CC Investigations"}
                   date={moment(p.publishedAt).format("MM-DD-YY")}
