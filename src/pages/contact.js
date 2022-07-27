@@ -5,12 +5,31 @@ import theme from "theme";
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { useState } from "react";
-import { Container, Flex, Box, Button, Input, Text, Heading } from "theme-ui";
+import {
+  Container,
+  Flex,
+  Box,
+  Button,
+  Input,
+  Label,
+  Textarea,
+  Heading,
+} from "theme-ui";
 
 export default function Contact() {
-  const submit = (e) => {
+  async function handleOnSubmit(e) {
     e.preventDefault();
-  };
+    const formData = {};
+    Array.from(e.currentTarget.elements).forEach((field) => {
+      if (!field.name) return;
+      formData[field.name] = field.value;
+    });
+    fetch("/api/mail", {
+      method: "post",
+      body: JSON.stringify(formData),
+    });
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <section sx={{ variant: "section.testimonial" }}>
@@ -20,9 +39,29 @@ export default function Contact() {
               <Heading as="h2" sx={styles.title}>
                 Fill in the form to request services
               </Heading>
-              <Text as="p" sx={styles.description}>
-                The Form will be made soon....
-              </Text>
+              <form method="post" onSubmit={handleOnSubmit}>
+                <p>
+                  <Label sx={styles.label} htmlFor="name">
+                    Name
+                  </Label>
+                  <Input type="text" name="name"></Input>
+                </p>
+                <p>
+                  <Label sx={styles.label} htmlFor="name">
+                    Email
+                  </Label>
+                  <Input type="email" name="email"></Input>
+                </p>{" "}
+                <p>
+                  <Label sx={styles.label} htmlFor="name">
+                    Message
+                  </Label>
+                  <Textarea name="message" />
+                </p>
+                <p>
+                  <Button>Submit</Button>
+                </p>
+              </form>
             </Box>
           </Box>
         </Container>
@@ -91,6 +130,11 @@ const styles = {
       backgroundColor: ["text", "primary"],
       mt: [2, 0],
       py: ["15px"],
+    },
+    label: {
+      display: "block",
+      mb: [2],
+      fontWeight: 500,
     },
   },
 };
