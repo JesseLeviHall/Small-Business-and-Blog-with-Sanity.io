@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import { SLUGURL } from "../../../config";
+import Link from "next/link";
 import ShapeLeft from "../../assets/shape-left.png";
 import ShapeRight from "../../assets/shape-right.png";
 import { ThemeProvider } from "theme-ui";
@@ -28,44 +29,46 @@ export const Post = ({ title, body, image, published }) => {
     <ThemeProvider theme={theme}>
       <LayoutBlog>
         <section sx={styles.post}>
-          <Container sx={{ background: "#defbfc" }}>
-            <Box>
-              <Heading
-                as="h1"
-                sx={{
-                  mt: "85px",
-                  fontSize: "46pt",
-                  textAlign: "center",
-                  color: "#110221",
-                }}>
-                {title}
-              </Heading>
-              <hr sx={{ mb: "25px" }} variant="hr"></hr>
-              <Box>{imageUrl && <Image src={imageUrl} alt="banner" />}</Box>
-              <Text
-                sx={{
-                  variant: "sectionHeader.subTitle",
-                  color: "black",
-                  opacity: 1,
-                }}>
-                Published {"  "}
-                {moment(published).format("MM-DD-YY")}
-              </Text>
-              <hr variant="hr"></hr>
-              <Text sx={{ textAlign: "left", color: "black" }}>
-                <BlockContent
-                  blocks={body}
-                  imageOptions={{
-                    w: 320,
-                    h: 240,
-                    fit: "max",
-                    position: "relative",
-                  }}
-                  projectId="6f7brgic"
-                  dataset="production"
-                />
-              </Text>
+          <Container sx={styles.container}>
+            <Link href="/blog">
+              <Button aria-label="all-posts" sx={styles.button}>
+                All Posts
+              </Button>
+            </Link>
+            <Heading sx={styles.title} as="h1">
+              {title}
+            </Heading>
+            <hr sx={{ mb: "25px" }} variant="hr"></hr>
+            <Box sx={styles.imageBox}>
+              {imageUrl && (
+                <Image sx={styles.imageBox.img} src={imageUrl} alt="banner" />
+              )}
             </Box>
+            <Text sx={styles.date}>
+              Published {"  "}
+              {moment(published).format("MM-DD-YY")}
+            </Text>
+            <hr variant="hr"></hr>
+            <Text sx={styles.body}>
+              <BlockContent
+                sx={styles.body}
+                blocks={body}
+                imageOptions={{
+                  w: 220,
+                  fit: "min",
+                }}
+                projectId="6f7brgic"
+                dataset="production"
+              />
+            </Text>
+            <Link href="/blog">
+              <Button
+                css={{ marginTop: "45px" }}
+                aria-label="all-posts"
+                sx={styles.button}>
+                All Posts
+              </Button>
+            </Link>
           </Container>
         </section>
       </LayoutBlog>
@@ -143,12 +146,39 @@ const styles = {
   },
   imageBox: {
     justifyContent: "center",
-    textAlign: "center",
-    display: "inline-flex",
+    mx: "auto",
+    maxWidth: "65%",
+    display: "block",
     mb: [0, null, -6, null, null, "-40px", null, -3],
     img: {
+      boxShadow: "0px 4px 10px rgba(38,78,118,0.12)",
       position: "relative",
-      height: [145, "auto"],
     },
+  },
+  container: {
+    padding: ["15px 20px", "25px 30px"],
+    textAlign: "center",
+    background: "#defbfc",
+    borderRadius: "28px",
+    mb: "25px",
+  },
+  title: {
+    mt: "85px",
+    fontSize: "46pt",
+    textAlign: "center",
+    color: "#110221",
+  },
+  date: {
+    variant: "sectionHeader.subTitle",
+    color: "black",
+    opacity: 1,
+  },
+  body: {
+    textAlign: "left",
+    color: "black",
+    mx: "15px",
+  },
+  button: {
+    top: 2,
   },
 };

@@ -53,7 +53,6 @@ export default function IndexPage({ posts }) {
         <WorkFlow />
         <Package />
         <BlogSection mappedPosts={mappedPosts} />
-        <Subscribe />
       </Layout>
     </ThemeProvider>
   );

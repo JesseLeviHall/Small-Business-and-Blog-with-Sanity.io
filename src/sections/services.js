@@ -7,37 +7,55 @@ import Carousel from "react-multi-carousel";
 const data = [
   {
     id: 1,
-    title: "Background Investigations",
+    title: "Background Checks",
     description:
       "Ranging from simple locate reports to more comprehensive checks including employment, media and social media sweeps, criminal background, and requests for records.",
-    review: 4,
   },
   {
     id: 2,
-    title: "Gather evidence for cases or private matters",
+    title: "Jury and Trial Support",
     description:
-      "includes jury and trial support such as interviews of witnesses, verify information, conduct surveillance, find missing persons, and gather vital facts for cases. ",
-    review: 5,
+      "Interviews of witnesses, verify information, conduct surveillance, and gather vital facts for cases. ",
   },
   {
     id: 3,
     title: "Crime Victim Support",
     description:
       "Help victims gather evidence to support and document losses for restitution, connect with appropriate community resources available for crime victims.",
-    review: 5,
   },
   {
     id: 4,
     title: "Covert Serveillance",
     description:
       "Learn more about a subject by discreetly gathering information. Includes taking photos or recording audio, video, and even aerial surveylance with drones.",
-    review: 4,
   },
   {
     id: 5,
     title: "Process Serving",
+    description: "CC Investigations offers document courier services.",
+  },
+  {
+    id: 6,
+    title: "Document Courier",
     description:
-      "CC Investigations offers document courier services and process serving.",
+      "transport legal materials to law offices, financial institutions, businesses, government agencies, or other facilities.",
+  },
+  {
+    id: 7,
+    title: "Simple Employment Bakcgournds",
+    description: "Collect work hisotory records",
+  },
+  {
+    id: 8,
+    title: "Locate Missing or Runnaway People",
+    description:
+      "No matter the cause of the disappearance, CC Investigations will work hard to find the person you are looking for.",
+  },
+  {
+    id: 9,
+    title: "Addoption Information",
+    description:
+      "Search adoptionrRecords to discover more about your family history.",
   },
 ];
 

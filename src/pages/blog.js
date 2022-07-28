@@ -40,11 +40,13 @@ export default function Blog({ posts }) {
     <ThemeProvider theme={theme}>
       <LayoutBlog>
         <section sx={styles.post}>
-          <Container css={{ textAlign: "center", background: "#defbfc" }}>
+          <Container sx={styles.container}>
             {mappedPosts.length ? (
               mappedPosts.map((p, index) => (
                 <Box sx={styles.card} key={index}>
-                  <Box sx={styles.thumbnail}>
+                  <Box
+                    onClick={() => router.push(`/post/${p.slug.current}`)}
+                    sx={styles.thumbnail}>
                     <Image src={p.mainImage} alt="thumbnail" />
                   </Box>
 
@@ -98,6 +100,8 @@ const styles = {
     pt: ["140px", "145px", "155px", "170px", null, null, "180px", "215px"],
     pb: [2, null, 0, null, 2, 0, null, 5],
     position: "relative",
+    justifyContent: "center",
+    alignItems: "center",
     zIndex: 2,
     "&::before": {
       position: "absolute",
@@ -129,9 +133,11 @@ const styles = {
   card: {
     backgroundColor: "white",
     boxShadow: "0px 4px 10px rgba(38,78,118,0.12)",
-    borderRadius: "7px",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: "10px",
     pt: "20px",
-    m: "0 15px 140px",
+    m: "20px 15px 140px",
     transition: "all 0.3s",
     "&:hover": {
       boxShadow: "0px 5px 20px rgba(38,78,118,0.15)",
@@ -139,12 +145,19 @@ const styles = {
   },
 
   thumbnail: {
+    boxShadow: "4px 1px 10px rgba(38,78,118,0.12)",
     justifyContent: "center",
     alignItems: "center",
-    position: "relative",
+    mx: "auto",
     borderRadius: "7px",
     overflow: "hidden",
     display: "flex",
+    maxWidth: "75%",
+    transition: "all 0.3s",
+    "&:hover": {
+      boxShadow: "5px 12px 28px rgba(38,78,118,0.15)",
+      cursor: "pointer",
+    },
     img: {
       borderRadius: "7px",
       minWidth: "25%",
@@ -152,19 +165,24 @@ const styles = {
   },
   postContent: {
     flexDirection: "column",
-    justifyContent: "space-between",
+
     padding: ["15px 20px", "25px 30px"],
   },
   title: {
+    boxShadow: "0px 4px 10px rgba(38,78,118,0.12)",
+    borderRadius: "8px",
     fontSize: [3, null, null, null, null, 4],
     color: "black",
-    lineHeight: [1.4, 1.5],
+
+    textAlign: "center",
+    lineHeight: [4.4, 4.5],
     fontWeight: 700,
     mb: [3, 4, 5],
     pr: [0, null, null, null, 5],
     transition: "all 0.3s",
     "&:hover": {
-      boxShadow: "0px 5px 20px rgba(38,78,118,0.15)",
+      boxShadow: "5px 12px 28px rgba(38,78,118,0.15)",
+      cursor: "pointer",
     },
   },
   postFooter: {
@@ -184,5 +202,11 @@ const styles = {
       lineHeight: 1.5,
       color: "secondary",
     },
+  },
+  container: {
+    padding: ["15px 20px", "25px 30px"],
+    textAlign: "center",
+    background: "#defbfc",
+    borderRadius: "28px",
   },
 };

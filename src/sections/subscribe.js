@@ -80,8 +80,7 @@ export default function Subscribe() {
               Subscribe to the Blog
             </Heading>
             <Text as="p" sx={styles.description}>
-              Stay informed about what is going on in Albuquerque through
-              Carolyn's posts.
+              Stay informed about what is going on in Albuquerque from the Blog.
             </Text>
             <form onSubmit={subscribe}>
               <Flex sx={styles.subscribeForm}>
