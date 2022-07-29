@@ -29,7 +29,7 @@ export default function Header({ className }) {
             smooth={true}
             offset={-70}
             duration={500}>
-            Features
+            About
           </Scroll>
           <Scroll
             activeClass="active"
