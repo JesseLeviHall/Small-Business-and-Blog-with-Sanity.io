@@ -5,7 +5,7 @@ export default [
   },
   {
     path: "feature",
-    label: "Features",
+    label: "About",
   },
   {
     path: "services",
