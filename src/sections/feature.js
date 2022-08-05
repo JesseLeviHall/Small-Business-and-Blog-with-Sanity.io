@@ -23,7 +23,7 @@ const data = [
     altText: "Community Connection",
     title: "Community Connection",
     text:
-      "Investigating important local issues has cutlivated a deep understanding of the voice of the community and its members. CC Investigations has earnd a vast network of professional connections built on trust and a committment to integrity and social responsibility.",
+      "Investigating important local issues has cutlivated a deep understanding of the voice of the community and its members. CC Investigations has developed a vast network of professional connections built on trust and a committment to integrity and social responsibility.",
   },
   {
     id: 3,

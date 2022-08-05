@@ -22,7 +22,7 @@ const data = [
   },
   {
     id: 3,
-    title: "The investigation is caried out",
+    title: "The investigation is carried out",
     text:
       "Carolyn will conduct the job and keep in touch with you on the progress.",
   },

@@ -25,14 +25,15 @@ const data = [
   },
   {
     id: 4,
-    title: "Covert Serveillance",
+    title: "Covert Surveillance",
     description:
       "Learn more about a subject by discreetly gathering information. Includes taking photos or recording audio, video, and even aerial surveylance with drones.",
   },
   {
     id: 5,
     title: "Process Serving",
-    description: "CC Investigations offers document courier services.",
+    description:
+      "Delivering legal documents according to diligence standards and best practices",
   },
   {
     id: 6,
