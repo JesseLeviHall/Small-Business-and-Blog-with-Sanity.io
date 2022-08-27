@@ -12,8 +12,8 @@ export default async (req, res) => {
   `;
 
   await mail.send({
-    to: "jesselevihall@gmail.com",
-    from: "plugajawea@gmail.com",
+    to: "ccinvestigationsnm@gmail.com",
+    from: "ccinvestigationsnm@gmail.com",
     subject: "New Contact Form Message",
     text: message,
     html: message.replace(/\r\n/g, "<br>"),

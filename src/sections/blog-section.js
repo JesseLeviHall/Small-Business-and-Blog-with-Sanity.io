@@ -7,49 +7,6 @@ import ButtonGroup from "components/button-group";
 import Carousel from "react-multi-carousel";
 import { useRouter } from "next/router";
 import moment from "moment";
-import PostThumb1 from "assets/blog/1.jpg";
-import PostThumb2 from "assets/blog/2.jpg";
-import PostThumb3 from "assets/blog/3.jpg";
-import PostThumb4 from "assets/blog/4.jpg";
-
-const data = [
-  {
-    id: 1,
-    imgSrc: PostThumb1,
-    altText: "Marketing",
-    postLink: "#",
-    title: "Top Ten Best Detectives in ABQ",
-    authorName: "Cali Cartel",
-    date: "Sep 20, 2022",
-  },
-  {
-    id: 2,
-    imgSrc: PostThumb2,
-    altText: "Creative",
-    postLink: "#",
-    title: "Number One Secret Private Investigars NEED to know",
-    authorName: "James Carter",
-    date: "Oct 20, 2022",
-  },
-  {
-    id: 3,
-    imgSrc: PostThumb3,
-    altText: "Startup",
-    postLink: "#",
-    title: "How these 5 investigation tricks save time",
-    authorName: "Aston Aagar",
-    date: "Sep 20, 2022",
-  },
-  {
-    id: 4,
-    imgSrc: PostThumb4,
-    altText: "Creative",
-    postLink: "#",
-    title: "Nobody is talking about this genius tool for PI's ",
-    authorName: "Shamus Finningan",
-    date: "Sep 20, 2022",
-  },
-];
 
 const responsive = {
   desktop: {

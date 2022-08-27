@@ -66,7 +66,7 @@ export default function Contact() {
             <Box sx={styles.contentBox}>
               <Box sx={styles.contentBoxInner}>
                 <Heading as="h1" sx={styles.title}>
-                  Send A Sevice Request
+                  Send A Service Request
                 </Heading>
                 <Text>
                   To: CC Investigations <br /> Los Ranchos, New Mexico
