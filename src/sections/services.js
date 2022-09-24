@@ -6,6 +6,11 @@ import Carousel from "react-multi-carousel";
 
 const data = [
   {
+    id: 0,
+    title: "Notary Public",
+    description: "We are a Notary Public and can notarize your documents.",
+  },
+  {
     id: 1,
     title: "Background Checks",
     description:
